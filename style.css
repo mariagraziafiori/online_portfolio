@@ -1,23 +1,86 @@
-/*** Body ***/
+html {    
+  background: url('./images/megha-ajith-WRST5Pops3E-unsplash.jpg') no-repeat center fixed;     
+  background-size: cover;
+}
 
-body {
-    background-color: white;
+/* Dropdown Button */
+
+.dropbtn {
+  padding: 10px;
+  margin-right: 20px;
+  font-weight: bold;
+  font-size: 17.5px;
+  border: none;
+  border-radius: 2px;
+  cursor: pointer;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 123px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  padding: 12px 16px;
+  font-size: 16.5px;
+  display: block;
+}
+
+.dropdown-content a:hover {background-color: #f1f1f1}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown:hover .dropbtn {
+  background-color: #ff4438;
+  color: #f3f4f4;
+}
+
+
+/* Body */
+
+  body {
     font-family: Arial, Helvetica, sans-serif;
     font-size: 15px;
     margin: 0px;
   }
   
   body a {
-    color: black;
+    color: #000;
     text-decoration: none;
     font-weight: bold;
     font-size: 17.5px;
   }
 
-  body a:hover {
-     color: #ff4438;
-  }
+  nav a:hover {
+    color: #ff4438;
+ }
 
+ .container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+ }
+
+ .container .text {
+  padding: 90px;
+ }
+ 
+ .text h2 {
+  font-size: 80px;
+  color: #000; 
+}
+ 
 /*** Header ***/
 
   header img {
@@ -26,14 +89,11 @@ body {
   }
 
   header {
-    background-color: #f3f4f4;
     display: flex;
-    position: sticky;
     top: 0;
     z-index: 100;
     align-items: center;
     justify-content: space-between;
-    overflow: hidden;
     opacity: 0.98;
   }
 
@@ -61,31 +121,30 @@ body {
   }
 
   nav a {
+    font-size: 20px;
     padding: 20px;
   }
 
-/*** End Header ***/
+/* End Header */
 
-/*** Footer ***/
+/** Footer **/
 
-footer {
+ footer {
     position: fixed;
     left: 0px;
     bottom: 0;
     width: 100%;
     height: 60px;
-    color: white;
-    background: #ff4438;
 }
 
-footer p {
-text-align: center;
-padding-top: 13px;
-color:black; 
-font-size: 13px;
-}
+  footer p {
+  text-align: center;
+  padding: 13px;
+  color:#000; 
+  font-size: 12px;
+  }
 
-footer div {
+ footer div {
     display: inline-block;
     position:absolute;
     top:50%;
@@ -95,11 +154,11 @@ footer div {
     transform:translate(-50%,-50%);
   }
   
-  /* Icons */
+/* Icons */
   
   footer a {
-    color:black;
-    background: #f7aca8;
+    color:#222;
+    background: #ff7f7f;
     border-radius:20px;
     text-align:center;
     text-decoration:none;
@@ -118,13 +177,13 @@ footer div {
   }
   
   footer a:hover {
-    background: white;
+    background: #e3e7ea;
   }
   
   /* pop-up text */
   
  footer a span {
-    color:black;
+    color:#000;
     position:absolute;
     font-family:Arial, Helvetica, sans-serif;
     bottom:0;
@@ -134,7 +193,6 @@ footer div {
     z-index:-1;
     font-size:14px;
     border-radius:2px;
-    background:white;
     visibility:hidden;
     opacity:0;
     -o-transition:all .5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
@@ -151,7 +209,7 @@ footer div {
     height: 0; 
     border-left: 5px solid transparent;
     border-right: 5px solid transparent;
-    border-top: 5px solid #fff;
+    border-top: 5px solid #e3e7ea;
     position:absolute;
     bottom:-5px;
     left:40px;
@@ -177,9 +235,9 @@ footer div {
   content:'\f17d';
   }
   
-/*** End Footer ***/  
+/** End Footer **/  
 
-/*** Animation ***/
+/* Animation  */
   
     .mobile-menu-open .hamburger-menu .hamburger-lines:nth-child(1) {
         transform: translateY(6px) rotate(45deg);
@@ -197,7 +255,7 @@ footer div {
 
 /*** Media Queries ***/
   
-@media (min-width: 650px) {
+@media (min-width: 668px) {
     header {
       justify-content: space-between;
     }
@@ -209,10 +267,15 @@ footer div {
     .hamburger-menu {
       display: none;
     }
+
   }
   
-@media screen and (max-width: 650px) {
+@media screen and (max-width: 668px) {
     nav {
+      display: none;
+    }
+
+    .dropdown {
       display: none;
     }
   
@@ -228,11 +291,12 @@ footer div {
       align-items: center;
       justify-content: center;
       background-color: #f3f4f4;
-      opacity: 0.95;
+      opacity: 0.98;
     }
   
     nav a {
       padding: 10px;
+      font-size: 25px;
     }
 
     footer p {
@@ -241,4 +305,30 @@ footer div {
     font-size: 12.5px;
     }
 
+    footer {
+      background-color: #f3f4f4;
+    }
+
+    .container .text {
+      padding-top: 40px;
+      padding-left: 50px;
+      padding-right: 5px;
+      padding-bottom: 0px;
+     }
+
+    .container .text {
+      padding-top: 20px;
+      padding-left: 90px;
+      padding-left: 90px;
+      padding-bottom: 90px;
+    }
+     
+}
+
+@media screen and (max-width: 720px) {
+
+  footer {
+    background-color: #f3f4f4;
+  }
+  
 }
